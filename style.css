@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento%20Sans&display=swap');
+body {
+	font-size: 28px;
+	font-family: 'Quattrocento Sans', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+.header {
+	background-image: url("header_crop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: white;
+	text-shadow: 3px 3px 6px #000000;
+	text-align: center;
+	margin: 0px;
+	padding: 38px;
+}
+
+.content {
+	padding: 12px;
+	padding-left: 25%;
+	padding-right: 25%;
+	line-height: 1.15;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #292219;
+	position: -webkit-sticky;
+	/* Safari */
+	position: sticky;
+	top: 0;
+}
+
+li {
+	float: center;
+	padding: 14px 16px;
+	margin: 0px;
+}
+
+li a {
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	margin: 0px;
+}
+
+li a:hover {
+	background-color: #57c2bd;
+}
+
+.active {
+	background-color: #21605d;
+}
