@@ -40,9 +40,10 @@ body {
 	text-align: center;
 	padding: 0.875em 1em;
 	text-decoration: none;
+	display: block;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .droptop {
 	background-color: #57c2bd;
 }
 
@@ -52,8 +53,6 @@ body {
 
 .dropdown {
 	overflow: hidden;
-	text-align: center;
-	padding: 0.875em 1em;
 }
 
 .dropdown-content {
