@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<title>Projects</title>
-	<meta content="Projects" property="og:title" />
+	<title>Camcorders</title>
+	<meta content="Camcorders" property="og:title" />
 	<meta content="Mylo's Project Dump" property="og:description" />
 	<meta content="https://mylowhylo.github.io/projects.html" property="og:url" />
 	<meta content="#57c2bd" data-react-helmet="true" name="theme-color" />
@@ -35,24 +35,57 @@
 	</div>
 
 	<div class="content">
-		<h2>Thermal Printer</h2>
-		<h4 id="PrinterBot">PrinterBot</h4>
+		<h2>Camcorders</h2>
 		<p>
-			A little while back, I bought a thermal printer off of eBay. I then spent the next few weeks
-			writing a python module to interface with it. What did I do with this newfound power?
-			I made it print out messages sent on Discord! I know, kinda silly, right? You can find a link
-			to the repository <a href="https://github.com/MyloWhylo/PrinterBot">here.</a> While you're at
-			it, why not check out the video I made about it?
+			Yep. VHS camcorders. Why would anyone be interested in those in
+			<!-- We do a little bit of trolling -->
+			<script>document.write(new Date().getFullYear())</script>? Well, as an avid collector of inconvenient
+			technology, I'm naturally drawn towards the hassle that is shooting on tape. So when one of my pro cameras
+			arrived without a battery, I knew not having one was simply off the table. Unfortunately, they kinda were
+			about $100-$300 online, which is frankly out of my budget. So what's a technology-inclined fella to do?
+			Simple: I'd build my own.
+		</p>
+
+		<h3>Part 0: Is this even feasible?</h3>
+		<p>
+			Before I began, I needed to know if it even made sense to do this. If I made my own, would it be cheaper?
+			Luckily, one of my friends had a busted-up electric longboard with a good battery. I could probably use that,
+			get a converter module and toggle switch off eBay, and bam, good to go. I priced it out, and it came to ~$50.
+			Perfect.
+		</p>
+
+		<h3>Part 1: Design</h3>
+		<p>
+			Now I'll preface this by saying that I"m not very good at making things look pretty. I'm a big fan of boxes with
+			rounded edges because that's all I know how to make. I started off by modeling the battery and converter module,
+			so I'd have a rough guideline to work with. Then, I started making just a huge box to put everything in. After some 
+			iteration, here's what I came up with:
 		</p>
 		<p style="text-align:center">
-			<iframe class="youtubeiframe" src="https://www.youtube-nocookie.com/embed/BUbyWnpD1jE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<img src="images/camcorder/3dmodel.png" alt="An ugly 3D model" style="width:100%;">
 		</p>
-		<h4 id="ThermTape">(Thermal) Paper Tape</h4>
 		<p>
-			This clearly wasn't enough for me, so I started thinking of sillier ideas. All these printouts
-			are super long, and they almost seem like punch tape. What if I designed a way to store data
-			on the thermal paper? So I did. I mentioned this at the end of the PrinterBot video, and I
-			did actually go back and fix it. Here's what a printout of Atari's <i>Combat</i> looks like:
+			It's genuinely just a box. But then I had what I'm going to call An Idea&trade;. This is like the perfect job for a 
+			laser cutter, and I get free use of one through college. So I quickly whipped up a design:
+		</p>
+		<p style="text-align:center">
+			<img src="images/camcorder/avlibox.png" alt="A nicer 2D model" style="width:100%;">
+		</p>
+		<p>
+			Significantly better. All I had to do was order the parts and fabricate it.
+		</p>
+
+		<h3>Part 2: Getting Real</h3>
+		<p>
+			I went to the makerspace, and got cutting. Unfortunately, I didn't take many pictures during the assembly proecss,
+			but I do have this pic from after:
+		</p>
+		<p style="text-align:center">
+			<img src="images/camcorder/cambox.jpg" alt="The camera with the box on it" style="width:100%;">
+		</p>
+		<p>
+			I haven't gotten around to gluing it together (schoolwork keeps me busy!), but once I will I'll post an update.
+			All told I'm in for ~$50, so I'm under half the cost of a proper battery. That's a success in my book!
 		</p>
 	</div>
 </body>
