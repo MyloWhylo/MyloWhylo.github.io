@@ -3,6 +3,7 @@
 
 <head>
 	<title>Photography</title>
+	<meta charset="UTF-8">
 	<meta content="Photography" property="og:title" />
 	<meta content="Mylo's Project Dump" property="og:description" />
 	<meta content="https://mylowhylo.github.io/index.html" property="og:url" />
@@ -12,6 +13,40 @@
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="https://mylowhylo.github.io/favicon.ico">
 	<link rel="stylesheet" href="https://mylowhylo.github.io/style.css">
+	<link rel="stylesheet" href="https://mylowhylo.github.io/photos.css">
+
+	<script>
+		var imagePresent = false;
+		var topVisible = false;
+
+		function viewImage(image) {
+			var topImage = document.getElementById("topImage");
+			var bottomImage = document.getElementById("bottomImage");
+			var imgText = document.getElementById("imgtext");
+
+			if (imagePresent) {
+				bottomImage.src = topImage.src;
+				topImage.classList.add("hidden");
+				topImage.src = image.src;
+				setTimeout(() => {
+					topImage.classList.remove("hidden");
+				}, 0);
+			}
+			else {
+				topImage.src = image.src;
+				imagePresent = true;
+			}
+
+			imgText.innerHTML = image.alt;
+			topImage.parentElement.style.visibility = "visible";
+		}
+
+		function closeImage(buttonObj) {
+			buttonObj.parentElement.style.visibility = 'hidden';
+			imagePresent = false;
+		}
+	</script>
+
 </head>
 
 <body>
@@ -27,8 +62,8 @@
 				<a href="https://mylowhylo.github.io/projects/thermprint.html">PrinterBot</a>
 				<a href="https://mylowhylo.github.io/projects/thermprint.html#ThermTape">Thermal Paper Tape</a>
 				<a href="https://mylowhylo.github.io/projects/camcorders.html">Camcorders</a>
-			 </div>
-		</div> 
+			</div>
+		</div>
 		<a class="active" href="https://mylowhylo.github.io/photos.html">Photography</a>
 		<a href="https://mylowhylo.github.io/videos.html">Videos</a>
 		<a href="https://mylowhylo.github.io/contact.html">Contact</a>
@@ -37,6 +72,28 @@
 	<div class="content">
 		<h2>Photography</h2>
 		<p>I'm working on finalizing the look of the website. Photos will be along shortly!</p>
+		<div class="row">
+			<div class="column">
+				<img src="photos/fallColors-0006.jpg" alt="AT&T Long Lines Tower" style="width:100%"
+					onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/snow.jpg" alt="Snow at Night" style="width:100%" onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/fallColors-0031.jpg" alt="Spring Mill" style="width:100%" onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/hifi-2.jpg" alt="Cassette Deck" style="width:100%" onclick="viewImage(this);">
+			</div>
+		</div>
+
+		<div class="container">
+			<span onclick="closeImage(this)" style="z-index: 2;" class="closebtn">&times;</span>
+			<img id="topImage" style="width:100%; z-index: 1;">
+			<img id="bottomImage" style="width:100%; z-index: 0;">
+			<div id="imgtext" class="caption" style="z-index: 2;"></div>
+		</div>
 	</div>
 </body>
 

@@ -1,0 +1,72 @@
+.column {
+	float: left;
+	width: 25%;
+	padding: 0.25rem;
+}
+
+.column img {
+	opacity: 0.8; 
+	cursor: pointer; 
+}
+
+.column img:hover {
+	opacity: 1;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	position: relative;
+	visibility: hidden;
+}
+
+.container img {
+	position: absolute;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-ms-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	opacity: 1;
+	padding-bottom: 1rem;
+}
+
+.container img.hidden {
+	-webkit-transition: 0s;
+	-moz-transition: 0s;
+	-ms-transition: 0s;
+	-o-transition: 0s;
+	transition: 0s;
+	opacity: 0;
+}
+
+.caption {
+	/* position: relative;
+	bottom: 15px;
+	left: 15px; */
+	position:relative;
+	left: 1rem;
+	top: 0.75rem;
+	color: white;
+	font-size: 1.25rem;
+	text-shadow: 0.125rem 0.125rem 0.25rem black;
+}
+
+.closebtn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: white;
+	opacity: 0.8;
+	font-size: 2.1875rem;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.closebtn:hover {
+	opacity: 1;
+}
