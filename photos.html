@@ -21,22 +21,11 @@
 
 		function viewImage(image) {
 			var topImage = document.getElementById("topImage");
-			var bottomImage = document.getElementById("bottomImage");
 			var imgText = document.getElementById("imgtext");
 
-			if (imagePresent) {
-				bottomImage.src = topImage.src;
-				topImage.classList.add("hidden");
-				topImage.src = image.src;
-				setTimeout(() => {
-					topImage.classList.remove("hidden");
-				}, 0);
-			}
-			else {
-				topImage.src = image.src;
-				imagePresent = true;
-			}
-
+			topImage.src = image.src;
+			imagePresent = true;
+			
 			imgText.innerHTML = image.alt;
 			topImage.parentElement.style.visibility = "visible";
 		}
@@ -71,7 +60,7 @@
 
 	<div class="content">
 		<h2>Photography</h2>
-		<p>I'm working on finalizing the look of the website. Photos will be along shortly!</p>
+		<p>In my free time, I like to do photography. Here's some of the photos I've taken!</p>
 		<div class="row">
 			<div class="column">
 				<img src="photos/fallColors-0006.jpg" alt="AT&T Long Lines Tower" style="width:100%"
@@ -87,12 +76,25 @@
 				<img src="photos/hifi-2.jpg" alt="Cassette Deck" style="width:100%" onclick="viewImage(this);">
 			</div>
 		</div>
+		<div class="row">
+			<div class="column">
+				<img src="photos/btown-0102.jpg" alt="Sample Gates" style="width:100%" onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/betamale-0079.jpg" alt="Betamax Equipment" style="width:100%" onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/malibu_26 (4 of 17).jpg" alt="Ford Thunderbird" style="width:100%" onclick="viewImage(this);">
+			</div>
+			<div class="column">
+				<img src="photos/malibu-0029.jpg" alt="Condos in Malibu" style="width:100%" onclick="viewImage(this);">
+			</div>
+		</div>
 
 		<div class="container">
-			<span onclick="closeImage(this)" style="z-index: 2;" class="closebtn">&times;</span>
-			<img id="topImage" style="width:100%; z-index: 1;">
-			<img id="bottomImage" style="width:100%; z-index: 0;">
-			<div id="imgtext" class="caption" style="z-index: 2;"></div>
+			<span onclick="closeImage(this)" style="z-index: 1;" class="closebtn">&times;</span>
+			<img id="topImage" style="width:100%; z-index: 0;">
+			<div id="imgtext" class="caption" style="z-index: 1;"></div>
 		</div>
 	</div>
 </body>

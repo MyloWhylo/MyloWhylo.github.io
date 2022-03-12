@@ -45,9 +45,6 @@
 }
 
 .caption {
-	/* position: relative;
-	bottom: 15px;
-	left: 15px; */
 	position:relative;
 	left: 1rem;
 	top: 0.75rem;
