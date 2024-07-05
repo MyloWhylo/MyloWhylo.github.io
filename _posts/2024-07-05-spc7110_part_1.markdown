@@ -1,0 +1,11 @@
+---
+layout: post
+title: "SPC7110 Part 1 or: How I Learned to Stop Worrying and Love the ROMHack"
+date: 2024-07-05 1:41:00 -0400
+category: SPC7110
+tags: SNES Verilog FPGAs "Reverse Engineering" romhack reproduction
+---
+# Intro
+One of the great things that made the SNES great (and really, every console before the CD era) was that they allowed developers to greatly enhance the performance of the console simply by including special hardware on the cartridge. The NES saw this a little bit with its mappers, which brought much needed relief from the ROM constraints of the system. So when the Super NES came out, developers already used to working with the mappers of the NES days stepped up their game. Of course, the classics like the Super FX and the late-to-the-party SA1 (which was a better SNES CPU they shoved inside the cartridge) are well known, but outside of Nintendo, other companies got busy as well. Hudson Soft, an absolute force to be reckoned with on the platform, developed a chip simply named the SPC7110. It was only used in 3 games, but is most well known for its inclusion in Tengai Makyou Zero ("Far East of Eden: Zero"), a 1995 JRPG, which used its capabilities to include more graphics, music, and dialogue than other games could dream about. This is part 1 of a deep dive into the SPC7110, as well as my efforts to document it and enable modern reproductions of the game.
+
+# Background
